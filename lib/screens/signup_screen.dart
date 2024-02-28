@@ -32,12 +32,24 @@ class _SignupScreenState extends State<SignupScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              inputField(
-                hintText: 'username',
-                errorMessage: 'Please enter your email',
-                textEditingController: userNameEditingController,
+              const Row(
+                children: [
+                  Text(
+                    "SignUp",
+                    style: TextStyle(
+                      fontSize: 60,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
+              // inputField(
+              //   hintText: 'username',
+              //   errorMessage: 'Please enter your email',
+              //   textEditingController: userNameEditingController,
+              // ),
+              // const SizedBox(height: 20),
               inputField(
                 hintText: 'Email',
                 errorMessage: 'Please enter your email',
@@ -49,12 +61,12 @@ class _SignupScreenState extends State<SignupScreen> {
                 errorMessage: 'Please enter your password',
                 textEditingController: passwordEditingController,
               ),
-              const SizedBox(height: 20),
-              inputField(
-                hintText: 'confirm password',
-                errorMessage: 'Please enter your password',
-                textEditingController: confirmPasswordEditingController,
-              ),
+              // const SizedBox(height: 20),
+              // inputField(
+              //   hintText: 'confirm password',
+              //   errorMessage: 'Please enter your password',
+              //   textEditingController: confirmPasswordEditingController,
+              // ),
               const SizedBox(height: 10),
               RichText(
                 text: TextSpan(

@@ -3,6 +3,7 @@ import 'package:firestore_demo/application/auth/auth_bloc.dart';
 import 'package:firestore_demo/application/prod/product_bloc.dart';
 import 'package:firestore_demo/screens/splash_Screen.dart';
 import 'package:firestore_demo/services/route_service.dart';
+import 'package:firestore_demo/services/shared_prefs.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,6 +15,11 @@ Future main() async {
   } else {
     await Firebase.initializeApp();
   }
+  await Future.wait([
+    // ScreenUtil.ensureScreenSize(),
+    Prefs.init(),
+    // FirebaseMessagingOverride().init(),
+  ]);
 
   runApp(const MyApp());
 }

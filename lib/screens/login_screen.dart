@@ -27,6 +27,18 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Row(
+                children: [
+                  Text(
+                    "LogIn",
+                    style: TextStyle(
+                      fontSize: 60,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
               inputField(
                 hintText: 'Email',
                 errorMessage: 'Please enter your email',

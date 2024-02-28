@@ -6,20 +6,19 @@ class ProductDetailScreen extends StatelessWidget {
   final String productName;
   final String measurement;
   final String price;
-  final String id;
 
-  const ProductDetailScreen(
-      {super.key,
-      required this.productName,
-      required this.measurement,
-      required this.price,
-      required this.id});
+  const ProductDetailScreen({
+    super.key,
+    required this.productName,
+    required this.measurement,
+    required this.price,
+  });
 
   @override
   Widget build(BuildContext context) {
     // Encode product details into a string
     final String qrData =
-        '{"name": "$productName", "measurement": "$measurement", "price": $price , "id" : $id}';
+        '{"name": "${productName.toString()}", "measurement": "${measurement.toString()}", "price": ${price.toString()}}';
 
     return Scaffold(
       appBar: AppBar(
@@ -40,16 +39,13 @@ class ProductDetailScreen extends StatelessWidget {
               height: 10,
             ),
             CustomButton(
-              title: "id : $id",
-            ),
-            CustomButton(
               title: "Name : $productName",
             ),
             CustomButton(
               title: "measurement : $measurement",
             ),
             CustomButton(
-              title: "price : $productName",
+              title: "price : $price",
             ),
           ],
         ),
