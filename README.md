@@ -1,5 +1,5 @@
 
-Mobile App Documentation - Version 1.0.0
+Firestore Demo - Version 1.0.0
 
 Introduction
 Welcome to our mobile app! This application integrates Firebase Authentication for user login and signup. Authenticated users can seamlessly manage products, add new items, and view a detailed product list with QR codes representing each product. The app employs the BLoC pattern for efficient state management.
